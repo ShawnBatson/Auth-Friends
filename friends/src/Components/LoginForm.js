@@ -26,7 +26,7 @@ export const LoginForm = () => {
         console.log("this is in the login event", res);
         localStorage.setItem("token", res.data.payload);
         //come back to here V  this may be wrong;
-        userInfo.props.history.push("/protected");
+        // res.props.history.push("/protected");
       })
       .catch(err => {
         console.log(err);
