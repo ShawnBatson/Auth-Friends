@@ -50,3 +50,15 @@
 .password-input {
   margin: 2%;
 }
+
+li {
+  list-style: none;
+  margin-right: 6px;
+}
+
+ul {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 0 36px;
+  padding: 12px;
+}

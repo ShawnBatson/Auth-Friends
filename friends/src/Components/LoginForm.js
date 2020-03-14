@@ -5,7 +5,7 @@ import "../App.css";
 export const LoginForm = () => {
   const [userInfo, setUserInfo] = useState({
     credentials: {
-      userName: "",
+      username: "",
       password: ""
     }
   });
@@ -13,8 +13,8 @@ export const LoginForm = () => {
   const handleChange = event => {
     setUserInfo({
       credentials: {
-        ...userInfo,
-        [event.target.value]: event.target.value
+        ...userInfo.credentials,
+        [event.target.name]: event.target.value
       }
     });
   };
@@ -24,6 +24,9 @@ export const LoginForm = () => {
       .post("/login", userInfo.credentials)
       .then(res => {
         console.log("this is in the login event", res);
+        localStorage.setItem("token", res.data.payload);
+        //come back to here V  this may be wrong;
+        userInfo.props.history.push("/protected");
       })
       .catch(err => {
         console.log(err);
@@ -32,18 +35,22 @@ export const LoginForm = () => {
 
   return (
     <div>
-      <form>
+      <form onSubmit={login}>
         <input
           className="login-input"
           type="text"
-          name="userName"
+          value={userInfo.credentials.userName}
+          name="username"
           placeholder="login"
+          onChange={handleChange}
         />
         <input
           className="password-input"
-          type="text"
+          type="password"
+          value={userInfo.credentials.password}
           name="password"
           placeholder="password"
+          onChange={handleChange}
         />
         <button>Log In</button>
       </form>
