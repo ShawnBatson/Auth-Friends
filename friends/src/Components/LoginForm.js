@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { axiosWithAuth } from "../utils/axiosWithAuth";
 import "../App.css";
 
-export const LoginForm = () => {
+export const LoginForm = props => {
+  console.log(props);
   const [userInfo, setUserInfo] = useState({
     credentials: {
       username: "",
@@ -25,8 +26,8 @@ export const LoginForm = () => {
       .then(res => {
         console.log("this is in the login event", res);
         localStorage.setItem("token", res.data.payload);
-        //come back to here V  this may be wrong;
-        // res.props.history.push("/protected");
+        //redo-this V
+        props.history.push("/FriendsList");
       })
       .catch(err => {
         console.log(err);
