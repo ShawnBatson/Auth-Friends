@@ -26,7 +26,6 @@ export const LoginForm = props => {
       .then(res => {
         console.log("this is in the login event", res);
         localStorage.setItem("token", res.data.payload);
-        //redo-this V
         props.history.push("/FriendsList");
       })
       .catch(err => {
