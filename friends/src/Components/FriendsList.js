@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { axiosWithAuth } from "../utils/axiosWithAuth";
+import { FriendsForm } from "./FriendsForm";
+import "../App.css";
 
 const FriendsList = () => {
   const [myFriends, setMyFriends] = useState([]);
@@ -25,6 +27,7 @@ const FriendsList = () => {
           </div>
         ))}
       </div>
+      <FriendsForm />
     </div>
   );
 };
