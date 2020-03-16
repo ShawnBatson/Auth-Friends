@@ -9,14 +9,24 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <ul>
-          <li>
-            <Link to="/login">Login</Link>
-          </li>
-          <li>
-            <Link to="/FriendsList">Friends List</Link>
-          </li>
-        </ul>
+        <div className="nav">
+          <ul>
+            <li>
+              <Link to="/login" className="link">
+                Login
+              </Link>
+            </li>
+            <li>
+              <Link to="/FriendsList" className="link">
+                Friends List
+              </Link>
+            </li>
+          </ul>
+          <h1 className="text">This is your current Friends List</h1>
+          <p className="text">
+            To add another friend, fill out the form below and submit!
+          </p>
+        </div>
         <Switch>
           <PrivateRoute exact path="/FriendsList" component={FriendsList} />
           <Route path="/login" component={LoginForm} />

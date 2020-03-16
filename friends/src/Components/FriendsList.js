@@ -18,16 +18,18 @@ const FriendsList = () => {
 
   return (
     <div>
+      <div className="friend-form">
+        <FriendsForm />
+      </div>
       <div className="friendCard">
         {myFriends.map(friend => (
-          <div>
-            <h1>{friend.name}</h1>
-            <h2>{friend.age}</h2>
-            <h3>{friend.email}</h3>
+          <div className="individual-card">
+            <h1 className="friend-card-writing">{friend.name}</h1>
+            <h2 className="friend-card-writing">{friend.age}</h2>
+            <h3 className="friend-card-writing">{friend.email}</h3>
           </div>
         ))}
       </div>
-      <FriendsForm />
     </div>
   );
 };

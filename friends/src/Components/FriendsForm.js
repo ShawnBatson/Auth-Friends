@@ -33,7 +33,7 @@ export const FriendsForm = () => {
 
   return (
     <div>
-      <form onSubmit={formPost}>
+      <form onSubmit={formPost} className="form-form">
         <label>Name:</label>
         <input type="text" name="name" onChange={handleChanges} />
         <label>Age:</label>

@@ -35,7 +35,7 @@ export const LoginForm = props => {
 
   return (
     <div>
-      <form onSubmit={login}>
+      <form onSubmit={login} className="main-form">
         <input
           className="login-input"
           type="text"
