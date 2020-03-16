@@ -40,7 +40,9 @@ export const FriendsForm = () => {
         <input type="text" name="age" onChange={handleChanges} />
         <label>E-mail:</label>
         <input type="text" name="email" onChange={handleChanges} />
-        <button type="submit">Add</button>
+        <div className="button">
+          <button type="submit">Add</button>
+        </div>
       </form>
     </div>
   );
