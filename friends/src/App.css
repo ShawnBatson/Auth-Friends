@@ -1,0 +1,108 @@
+.App {
+  text-align: center;
+  background: Black;
+  width: 0, auto;
+}
+
+.text {
+  color: yellowgreen;
+  margin-bottom: 2%;
+}
+
+.login-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+}
+
+.login-input {
+  margin: 2%;
+}
+
+.password-input {
+  margin: 2%;
+}
+
+.link {
+  color: red;
+}
+
+a:hover {
+  color: yellow;
+}
+
+li {
+  list-style: none;
+  margin-right: 6px;
+  color: red;
+}
+
+ul {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 0 36px;
+  padding: 12px;
+}
+
+form {
+  background: grey;
+}
+
+.friend-card-writing {
+  color: greenyellow;
+}
+
+.friendCard {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 2%;
+  padding: 2%;
+}
+
+.friendCard {
+  display: flex;
+  width: 100%;
+}
+
+.individual-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 33%;
+  padding: 2%;
+  margin: 2%;
+  border: 1px solid blueviolet;
+  background: grey;
+  box-shadow: 10px 20px darkslategrey;
+}
+
+.friend-form {
+  height: 20rem;
+}
+
+.form-form {
+  border: 1px solid blue;
+  border-radius: 25px;
+  margin-right: 20px;
+  margin-left: 10px;
+}
+label {
+  display: flex;
+
+  flex-direction: column;
+  margin-top: 1%;
+  padding-bottom: 1%;
+}
+
+.button {
+  margin-top: 2%;
+}
+
+button {
+  width: 11rem;
+  margin-bottom: 2%;
+}
